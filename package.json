@@ -11,7 +11,8 @@
 		"start": "next start",
 		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
 		"lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,md}\""
+		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
+		"deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
 	},
 	"husky": {
 		"hooks": {
