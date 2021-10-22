@@ -72,3 +72,12 @@
 ## 4. License
 
 MIT © [Roldan Montilla Jr](https://github.com/roldanjr)
+
+
+## 5. Reference
+
+[git pages](https://medium.com/@anotherplanet/git-tips-next-js-github-pages-2dbc9a819cb8)
+
+[mongo db connection] (https://zellwk.com/blog/crud-express-mongodb/)
+
+
