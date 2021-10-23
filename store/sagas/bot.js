@@ -5,11 +5,11 @@ function* fetchBots() {
 	try {
 		const response = yield fetch("/api/bots");
 
-		const employeeList = yield response.json();
+		const botList = yield response.json();
 
 		yield put({
 			type: t.BOT_FETCH_SUCCEEDED,
-			payload: employeeList.data,
+			payload: botList.data,
 		});
 	} catch (error) {
 		yield put({

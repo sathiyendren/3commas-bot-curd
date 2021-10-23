@@ -120,13 +120,7 @@ export function Modal() {
 									name="pair"
 									placeholder="Pair"
 									className={cx("input", errors.pair && "input--error")}
-									ref={register({
-										required: "Pair is required!",
-										pattern: {
-											value: /^.*USDT.*$/i,
-											message: "Invalid trade pair!",
-										},
-									})}
+									ref={register({ required: true })}
 								/>
 							</div>
 
