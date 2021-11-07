@@ -12,11 +12,10 @@ const BotSchema = new mongoose.Schema({
 		trim: true,
 	},
 	isReadyToBuy: {
-        type: Boolean,
-        default: false
-    },
+		type: Boolean,
+		default: false,
+	},
 	createdAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.models.Bot ||
-	mongoose.model("Bot", BotSchema);
+export default mongoose.models.Bot || mongoose.model("Bot", BotSchema);

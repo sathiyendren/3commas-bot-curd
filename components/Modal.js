@@ -38,6 +38,7 @@ export function Modal() {
 				})
 			);
 		} else {
+			console.log(data);
 			dispatch(addBot(data));
 		}
 	};
@@ -46,6 +47,7 @@ export function Modal() {
 		if (state.selectedBot) {
 			setValue("name", state.selectedBot.name);
 			setValue("pair", state.selectedBot.pair);
+			setValue("isReadyToBuy", state.selectedBot.isReadyToBuy);
 		}
 	}, [state.selectedBot, setValue]);
 
@@ -115,7 +117,7 @@ export function Modal() {
 									)}
 								</label>
 								<input
-									type="pair"
+									type="text"
 									id="pairInput"
 									name="pair"
 									placeholder="Pair"
@@ -123,7 +125,29 @@ export function Modal() {
 									ref={register({ required: true })}
 								/>
 							</div>
+							<div className="form__element">
+							<label
+								htmlFor="isReadyToBuyInput"
+								className={cx("label", errors.isReadyToBuy && "label--error")}
+							>
+								{errors.isReadyToBuy ? (
+									`${errors.isReadyToBuy.message}`
+								) : (
+									<>
+									is Ready To Buy &nbsp;<span className="label__required">*</span>
+									</>
+								)}
+							</label>
+							<input
+								type="checkbox"
+								id="isReadyToBuyInput"
+								name="isReadyToBuy"
+								placeholder="Is Ready To Buy"
+								className={cx("input", errors.isReadyToBuy && "input--error")}
+								ref={register({ required: false })}
 
+							/>
+						</div>
 							<div className="form__action">
 								<button
 									className="btn btn__icon btn__cancel"

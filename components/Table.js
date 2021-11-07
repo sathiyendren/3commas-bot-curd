@@ -28,8 +28,8 @@ export function Table() {
 			</thead>
 
 			<tbody className="table__body">
-				{state.botList.map(({ _id, name, pair}) => (
-					<tr key={_id}>
+				{state.botList.map(({ _id, name, pair, isReadyToBuy}) => (
+					<tr key={_id} className={(isReadyToBuy ? 'ready' : 'not-ready')}>
 						<td>{name}</td>
 						<td>{pair}</td>
 						<td>

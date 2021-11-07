@@ -10,6 +10,7 @@
 		& > tr {
 			height: 5.6rem;
 			text-align: left;
+			
 
 			& > th {
 				padding: 0 1.6rem;
@@ -25,7 +26,13 @@
 		& > tr {
 			height: 5.2rem;
 			border-top: 1px solid $accent-2;
+			&.ready{
+				background: #6ff198;
+			}
 
+			&.not-ready{
+				background: #fb7373;
+			}
 			& > td {
 				padding: 0.8rem 1.6rem;
 			}
