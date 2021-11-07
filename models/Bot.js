@@ -11,6 +11,10 @@ const BotSchema = new mongoose.Schema({
 		required: [true, "Trade Pair is required!"],
 		trim: true,
 	},
+	isReadyToBuy: {
+        type: Boolean,
+        default: false
+    },
 	createdAt: { type: Date, default: Date.now },
 });
 
